@@ -167,7 +167,8 @@ main {
   padding: 10px;
   position: sticky;
   top: 0;
-  background: #ccc;
+  background: #ddd;
+  z-index: 99;
 }
 i {
   cursor: pointer;
