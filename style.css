@@ -84,7 +84,6 @@ header {
   border: none;
   transition: 0.3s;
   margin: 10px;
-  z-index: 3;
 }
 
 .tweet-button:hover {
@@ -96,8 +95,8 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 30%;
-  padding-top: 140px;
+  height: 26%;
+  padding-top: 120px;
 }
 
 .main-account a {
@@ -141,12 +140,12 @@ main {
 }
 
 .main-flex {
+  display: flex;
   width: 100%;
 }
 
 .main-feed {
-  /* margin-left: 30%; */
-  /* width: 50%; */
+  width: 50%;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   min-height: 100vh;
@@ -198,7 +197,6 @@ i {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin: 0 20px 20px 70px; */
 }
 
 .tweet-tools ul {
@@ -259,25 +257,62 @@ i {
   margin-top: 10px;
 }
 
+.searchBox {
+  width: 300px;
+  height: 50px;
+}
+
+.searchBox input {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  background: #ccc;
+  margin: 5px 0 0 5px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
 @media (max-width: 500px) {
-  .home {
-    flex-direction: column;
-  }
   header {
-    padding: 0;
+    display: none;
   }
   .tweet-text ul li {
     margin-left: 0;
   }
   .tweet-button {
-    width: fit-content;
-    padding: 5px;
+    padding: 10px 20px;
+    margin-right: 20px;
   }
   .nav-links a span {
     display: none;
   }
+  .tweet-tools {
+    display: flex;
+    /* flex-direction: column; */
+  }
   .tweet-tools ul {
-    margin: auto;
+    margin-left: 50px;
+  }
+  .tweeter-name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5px;
+    flex-direction: column;
+  }
+  main {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    margin-left: 0;
+  }
+  .main-feed {
+    width: 100%;
+  }
+
+  .side-feed {
+    display: none;
   }
 }
 
@@ -300,15 +335,26 @@ i {
 
   .tweet-tools {
     display: flex;
-    flex-direction: column;
+  }
+
+  .tweet-tools ul {
+    margin-left: 50px;
   }
 
   .main-account {
     width: fit-content;
   }
 
-  .tweet-tools ul {
-    margin: auto;
+  .main-account .tweet-img {
+    display: none;
+  }
+
+  .main-feed {
+    width: 100%;
+  }
+
+  .side-feed {
+    display: none;
   }
 }
 
